@@ -1,0 +1,59 @@
+﻿// -*-C++-*-
+/*!
+ * @file  SpeechContentSVC_impl.h
+ * @brief Service implementation header of SpeechContent.idl
+ *
+ */
+
+#include "SpeechContentSkel.h"
+
+#ifndef SPEECHCONTENTSVC_IMPL_H
+#define SPEECHCONTENTSVC_IMPL_H
+
+
+class SpeechContent; 
+/*!
+ * @class Content_SpeechContentSVC_impl
+ * Example class implementing IDL interface Content::SpeechContent
+ */
+class Content_SpeechContentSVC_impl
+ : public virtual POA_Content::SpeechContent,
+   public virtual PortableServer::RefCountServantBase
+{
+ private:
+   // Make sure all instances are built on the heap by making the
+   // destructor non-public
+   //virtual ~Content_SpeechContentSVC_impl();
+  //SpeechContent* m_contentdata;
+
+ public:
+  /*!
+   * @brief standard constructor
+   */
+   Content_SpeechContentSVC_impl();
+  /*!
+   * @brief destructor
+   */
+   virtual ~Content_SpeechContentSVC_impl();
+
+   // attributes and operations
+   void read(const char* contentdata, ::CORBA::Long priority);
+
+   /*void setRTC(SpeechContent* contentdata){
+           m_contentdata = contentdata;
+        }
+*/
+ private:
+         //SpeechContent* m_contentdata;
+         char* m_contentdata;         
+ public:
+         //long getStringData() { return m_priority; }
+         char* getStringData() { return m_contentdata; }
+  
+};
+
+
+
+#endif // SPEECHCONTENTSVC_IMPL_H
+
+

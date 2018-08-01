@@ -1,0 +1,11 @@
+/**
+ * Filename = SpeechContent.idl
+ * 
+ **/
+module Content {
+
+	interface SpeechContent {
+	  void read (in string contentdata, in double priority);
+	};
+
+};

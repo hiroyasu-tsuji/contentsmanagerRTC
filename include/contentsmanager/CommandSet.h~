@@ -1,0 +1,12 @@
+#ifndef _CommandSet_H_
+#define _CommandSet_H_
+
+class CommandSet
+{
+ public:
+
+  CommandSet();
+  void getStringData();
+};
+
+#endif  //_CommandSet_H_
